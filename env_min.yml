@@ -1,0 +1,43 @@
+name: NIRS
+channels:
+  - conda-forge
+dependencies:
+  # ---- 基础 ----
+  - python=3.12
+  - pip
+  - setuptools
+  - wheel
+  - typing_extensions
+  - packaging
+  - importlib-metadata
+  - zipp
+
+  # ---- 科学计算（按需可删/保留）----
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+
+  # ---- Jupyter / 交互开发 ----
+  - ipykernel
+  - ipython
+  - jupyter_core
+  - jupyter_client
+  - pyzmq
+  - tornado
+  - traitlets
+  - psutil
+
+  # ---- 可在这里继续加 conda 包（例如：opencv, pytorch 等）----
+  # - opencv
+  # - pytorch
+  # - cudatoolkit
+
+  # ---- 纯 Python 包建议用 pip 安装（可按需增删）----
+  - pip:
+      - pyusb
+      - pyserial
+      - pyqtgraph         # 若你需要 GUI 绘图，可取消注释
+      - Pillow            # 图像处理
+      - tqdm              # 进度条
+      - requests          # 网络请求
